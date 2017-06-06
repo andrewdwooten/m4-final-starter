@@ -7,8 +7,7 @@ function isHotRead(reads){
   var links = $('.link')
   links.each(function(index){
     var link = $('.link').eq(index)
-    var baseUrl = link.children().first().next().text().split(':')
-    var url = (baseUrl[1] + ':' + baseUrl[2]).trim()
+    var url = link.find('.link-url').attr('href')
     if (urls.includes(url)){
       $(link).children().first().html(`<h2 class='hot-read'>HOT READ!!<h2>`)
     }
@@ -21,8 +20,7 @@ function isTopRead(topReadUrl) {
   var links = $('.link')
   links.each(function(index){
     var link = $('.link').eq(index)
-    var baseUrl = link.children().first().next().text().split(':')
-    var url = (baseUrl[1] + ':' + baseUrl[2]).trim()
+    var url = link.find('.link-url').attr('href')
     if (topReadUrl === url){
       $(link).children().first().html('')
       $(link).children().first().html(`<h2 class='top-read'>Top Read!!</h2>`)
