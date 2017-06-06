@@ -10,5 +10,5 @@
   
  ## Production URLs
  
- https://sheltered-cliffs-80557.herokuapp.com
- https://frozen-temple-33865.herokuapp.com
+ Hot Reads: https://sheltered-cliffs-80557.herokuapp.com
+ URLockbox: https://frozen-temple-33865.herokuapp.com
