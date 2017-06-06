@@ -17,13 +17,15 @@ function createLink(){
 }
 
 function displayLink(link){
-  $('#links').prepend(`<div class='link unread' align='center'><p>URL:<a href=${link.url}>${link.url}
+  $('#links').prepend(`<div class='link unread' align='center'><p>URL:<a class='link-url'href=${link.url}>${link.url}
                       </a></p><p>Title: ${link.title}</p>
                       <p>Read: ${link.read}</p>
                       <form class='button_to' method='get' action="/links/${link.id}/edit">
                       <input type="submit" value="Edit ${link.title}">
                       </form>
                       <button class='change-read-button' data-read-status='${link.read}' data-id='${link.id}'>Mark as Read</button>`)
+  $('.change-read-button').on('click', changeReadStatus)
+
 }
 
 function displayErrors(errors){

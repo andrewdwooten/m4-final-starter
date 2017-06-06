@@ -23,8 +23,8 @@ function changeReadStatus() {
 }
 
 function addToHotReads(id){
-  var baseUrl = $(`.change-read-button[data-id=${id}]`).parent().find('.link-url').text().split(':')
-  var url = (baseUrl[1] + ':' + baseUrl[2]).trim()
+  var url = $(`.change-read-button[data-id=${id}]`).parent().find('.link-url').attr('href')
+  console.log(url)
   $.post("https://sheltered-cliffs-80557.herokuapp.com/api/v1/reads", {read: {url: url}}).then((data) =>{
     console.log(data)
 })
