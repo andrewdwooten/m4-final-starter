@@ -17,7 +17,7 @@ function createLink(){
 }
 
 function displayLink(link){
-  $('#links').prepend(`<div class='link'><p>URL:<a href=${link.url}>${link.url}
+  $('#links').prepend(`<div class='link unread' align='center'><p>URL:<a href=${link.url}>${link.url}
                       </a></p><p>Title: ${link.title}</p>
                       <p>Read: ${link.read}</p>
                       <form class='button_to' method='get' action="/links/${link.id}/edit">
