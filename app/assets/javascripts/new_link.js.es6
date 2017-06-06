@@ -24,6 +24,8 @@ function displayLink(link){
                       <input type="submit" value="Edit ${link.title}">
                       </form>
                       <button class='change-read-button' data-read-status='${link.read}' data-id='${link.id}'>Mark as Read</button>`)
+  $('.change-read-button').on('click', changeReadStatus)
+
 }
 
 function displayErrors(errors){
