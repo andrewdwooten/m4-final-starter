@@ -15,6 +15,7 @@
   <% @links.each do |link| %>
     <% if link.read == true %>
       <div class='link read' align='center'>
+        <div class='hot_read'></div>
         <p class='link-url'>
           URL:<a href=<%=link.url %>><%= link.url %></a>
         </p>
@@ -29,8 +30,9 @@
       </div>
     <% else %>
      <div class='link unread' align='center'>
+       <div class='hot_read'></div>
        <p>
-         URL:<a href=<%=link.url %>><%= link.url %></a>
+         URL:<a class='link-url'href =<%=link.url %>><%= link.url %></a>
        </p>
         <p>
           Title: <%= link.title %>

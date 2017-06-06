@@ -2,3 +2,13 @@
   background-color: grey;
   text-decoration: line-through;
 }
+
+.top-read{
+  color: red;
+  font-weight: bold;
+}
+
+.hot-read{
+  color: green;
+  font-weight: bold;
+}

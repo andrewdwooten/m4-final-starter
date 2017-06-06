@@ -9,7 +9,6 @@ function createLink(){
   $.post("/api/v1/links", {link: {url: url, title: title}}).then((data) =>{
     if( data.url){
       displayLink(data)
-      addToHotReads(url)
     }
     else {
       displayErrors(data)
@@ -34,10 +33,4 @@ function displayErrors(errors){
                         <h3>${error}</h3>
                       </div>`)
   })
-}
-
-function addToHotReads(url){
-  $.post("https://sheltered-cliffs-80557.herokuapp.com/api/v1/reads", {read: {url: url}}).then((data) =>{
-    console.log(data)
-})
 }

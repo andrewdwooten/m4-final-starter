@@ -5,11 +5,11 @@ $( document ).ready(function(){
 })
 
 function filterLinks(){
-  links = $('.link')
+  var links = $('.link')
   links.each(function(index){
     var link = $('.link').eq(index)
-    var url = link.children().first().text().toLowerCase()
-    var title = link.children().first().next().text().toLowerCase()
+    var url = link.children().first().next().text().toLowerCase()
+    var title = link.children().first().next().next().text().toLowerCase()
     var queryString = $('input[name=filter-input]').val().toLowerCase()
     if (!url.includes(queryString) || !title.includes(queryString)){
       link.hide()
